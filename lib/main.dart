@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:whatsmyip/home_screen.dart';
-import 'package:whatsmyip/error_screen.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
+import 'package:whatsmyip/my_app.dart';
 
 void main() {
-  runApp(
-    const MyApp(),
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ],
   );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    ErrorWidget.builder = getErrorScreen;
-
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-    );
-  }
+  runApp(
+    Phoenix(
+      child: const MyApp(),
+    ),
+  );
 }

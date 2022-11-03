@@ -34,7 +34,6 @@ class ErrorScreen extends HookWidget {
                 style: TextStyle(
                   color: Color(0xFF263525),
                   fontWeight: FontWeight.w600,
-                  letterSpacing: 1.2,
                   fontSize: 15,
                 ),
               ),
@@ -64,7 +63,6 @@ class ErrorScreen extends HookWidget {
                     style: TextStyle(
                       color: Color(0xFFD0D2C8),
                       fontWeight: FontWeight.w600,
-                      letterSpacing: 1.2,
                       fontSize: 20,
                     ),
                   ),

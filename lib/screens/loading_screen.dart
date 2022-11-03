@@ -36,7 +36,6 @@ class LoadingScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xFF263525),
                   fontWeight: FontWeight.bold,
-                  letterSpacing: 1.2,
                   fontSize: 18,
                 ),
               ),
